@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo-V4</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <!-- display todos & toggle all button-->
+        <div>
+            <button onclick='handlers.toggleAll()'>Toggle All</button>
+        </div>
+        <!-- add a new todo -->
+        <div>
+            <button onclick='handlers.addTodo()' id="addItemButton">Add Item</button>
+            <input type="text" id="addTodoTextInput">
+        </div>
+        <!-- change a todo -->
+        <div>
+            <button onclick="handlers.changeTodo()">Change todo</button>
+            <input type="number" id="changeTodoPositionInput">
+            <input type="text" id="changeTodoTextInput">
+        </div>
+        <!-- toggle completed on single item -->
+        <div>
+            <button onclick='handlers.toggleTodo()'>Toggle Completed</button>
+            <input type="number" id="toggleCompletedInput">
+        </div>
+
+        <!-- display todo list -->
+        <ul></ul>
+        <!-- display todos -->
+        <div id="displayTodos"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
